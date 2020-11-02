@@ -42,8 +42,8 @@ section.colours {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
         "white white white"
-        "orange green purple"
-        "brown pink pink"
+        "orange orange purple"
+        "brown green pink"
         "blue blue blue";
     grid-gap: 5px;
 }
