@@ -1,0 +1,186 @@
+html,
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Allerta', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+main {
+    margin: 0 auto;
+    padding: 0px 15px;
+    max-width: 1140px;
+}
+
+div.grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr auto;
+}
+
+/* COLOURS */
+
+section.colours {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "white white white"
+        "orange green purple"
+        "brown pink pink"
+        "blue blue blue";
+    grid-gap: 5px;
+}
+
+section.colours>div {
+    border: 1.5px solid black;
+    min-height: 200px;
+    align-items: center;
+    display: flex;
+}
+
+section.colours .white h3 {
+    font-size: 2.5rem;
+    color: black !important;
+}
+
+section.colours h3 {
+    color: white;
+    font-family: 'Allerta', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.white {
+    grid-area: white;
+}
+
+.orange {
+    grid-area: orange;
+    background: orange;
+}
+
+.green {
+    grid-area: green;
+    background: green;
+}
+
+.purple {
+    grid-area: purple;
+    background: purple;
+}
+
+.brown {
+    grid-area: brown;
+    background: brown;
+}
+
+.pink {
+    grid-area: pink;
+    background: pink;
+}
+
+.blue {
+    grid-area: blue;
+    background: blue;
+}
+
+@media only screen and (max-width: 767px) {
+    section.colours {
+        grid-template-areas:
+            "white white white"
+            "orange orange orange"
+            "green green green"
+            "purple purple purple"
+            "brown brown brown"
+            "pink pink pink"
+            "blue blue blue";
+    }
+}
+
+/* FONTS */
+
+section.fonts {
+    font-size: 2rem;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.font-heading h3 {
+    font-family: 'Allerta';
+    font-size: 2.5rem;
+}
+
+section.fonts>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 125px;
+    border: 1.5px solid black;
+    background: #d5d5d5;
+}
+
+section.fonts .font-heading {
+    grid-column-start: span 2;
+}
+
+.times {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+.arial {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.allerta {
+    font-family: 'Allerta';
+}
+
+@media only screen and (max-width: 767px) {
+    section.fonts {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    section.fonts .font-heading {
+        grid-column-start: span 1;
+    }
+}
+
+section.text-styles {
+    text-align: center;
+    height: auto !important;
+}
+
+section.text-styles h3 {
+    font-family: 'Allerta';
+    font-size: 2.5rem;
+}
+
+section.text-styles h2 {
+    font-family: 'Allerta';
+    font-size: 1.5rem;
+}
+
+section.text-styles p {
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
